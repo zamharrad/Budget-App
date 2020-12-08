@@ -1,32 +1,25 @@
-var bugetController = (function(){
+// BUDGET CONTROLLER
+var bugetController = (function () {})();
 
-    var x = 23;
-
-    var add = function(a){
-        return a + x;
-    }
-
-    return {
-        publicTest: function(b){
-            return add(b);
-        }
-    }
-
+// UI CONTROLLER
+var UIController = (function () {
+  // some code
 })();
 
-var UIController = (function(){
-    // some code
-})();
+// GLOBAL CONTROLLER
+var controller = (function (budgetCtrl, UICntr) {
+  document.querySelector(".add__btn").addEventListener("click", function () {
+    console.log("button was clicked");
 
+   //  1. Get the filed input data
 
-var Controller = (function(budgetCtrl,UICntr){
+   // 2. Add the item to the budget
 
-    var c = budgetCtrl.publicTest(5);
+   //  3. Add the item to UI
 
-    return {
-        anotherPublic : function(){
-            console.log(c)
-        }
-    }
+   //  4. Calculate the budget
 
-})(bugetController,UIController);
+   //  5. Display the budget on UI
+
+  });
+})(bugetController, UIController);
